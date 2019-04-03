@@ -36,6 +36,10 @@ public class ScoreCalculator {
         printScoreReport(result5, "NumberFive", NumberFiveTest.getTestCount(),
                 NumberFiveTest.getScore(), NumberFiveTest.getMaxScore());
 
+        Result result6 = junit.run(NumberSixTest.class);
+        printScoreReport(result6, "NumberSix", NumberSixTest.getTestCount(),
+                NumberSixTest.getScore(), NumberSixTest.getMaxScore());
+
 
         System.out.println("Total Possible Points: " + MAX_SCORE);
         System.out.println("Your Total Score: " + TOTAL_SCORE);
