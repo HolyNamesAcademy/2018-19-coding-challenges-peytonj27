@@ -36,7 +36,13 @@ NumberThree Max Score: 15
 ```
 Once you have removed the `throw new UnsupportedOperationException();` line and start implementing your method the tests will start running, and generating a score for your solution.
 
-The `ScoreCalculator` will also give you a total score. We will be having a competition in class to see who can get the highest score. Prizes will definitely be awarded!
+The `ScoreCalculator` will also give you a total score. The output will contain the total possible points to earn, and also your current score.
+```
+Total Possible Points: 36
+Your Total Score: 0
+You got this! Keep it up!
+```
+We will be having a competition in class to see who can get the highest scores! Prizes will definitely be awarded!
 
 All challenges are in the **src/main/java/challenges package.** Good luck!
 
