@@ -13,7 +13,7 @@ public class NumberTwo {
      *
      * Example:
      * Given a = 4, b = 6, c = 2
-     * Return false
+     * Return true
      *
      * Example:
      * Given a = 5, b = 6, c = 3
