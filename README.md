@@ -34,7 +34,7 @@ Successes: 0
 NumberThree Score: 0
 NumberThree Max Score: 15
 ```
-Once you have removed the `throw new UnsupportedOperationException();` line and start implementing your method the tests will start running, and generating a score for your solution.
+Once you have removed the `throw new UnsupportedOperationException();` line and start implementing your method the tests will start running, and generate a score for your solution when you run the `ScoreCalculator` class. If you want to dig into which tests are passing or not for a challenge, you can use the run configurations set up for each challenge. Just select from the Run dropdown the tests for the challenge you are working on and run it!
 
 The `ScoreCalculator` will also give you a total score. The output will contain the total possible points to earn, and also your current score.
 ```
