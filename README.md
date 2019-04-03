@@ -23,7 +23,22 @@ Getting started
 
 The Project
 -----
-In this GitHub package you will find X coding challenges. Each challenge will have you implement one function. As you complete each coding challenge you should run the ScoreCalculator class. This will run all of the tests and tell you your updated score! For each challenge it will tell you how many tests were run, how many faled, and how many points you earned. 
+In this GitHub package you will find X coding challenges. Each challenge will have you implement one method. As you complete each coding challenge you should run the `ScoreCalculator` class. This will run all of the tests and tell you your updated score! For each challenge it will tell you how many tests were run, how many failed, and how many points you earned.
+
+Each method currently throws a `UnsupportedOperationException`. When you run the tests before you have removed the exception you will see a printout like this:
+```
+Running tests for NumberThree.
+Total Tests: 7
+Failures: 0
+Successes: 0
+NumberThree Score: 0
+NumberThree Max Score: 15
+```
+Once you have removed the `throw new UnsupportedOperationException();` line and start implementing your method the tests will start running, and generating a score for your solution.
+
+The `ScoreCalculator` will also give you a total score. We will be having a competition in class to see who can get the highest score. Prizes will definitely be awarded!
+
+All challenges are in the **src/main/java/challenges package.** Good luck!
 
 Turning In The Project
 -----
