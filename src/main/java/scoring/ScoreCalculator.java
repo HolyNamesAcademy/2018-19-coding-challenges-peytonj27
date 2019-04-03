@@ -34,6 +34,16 @@ public class ScoreCalculator {
         TOTAL_SCORE += NumberTwoTest.getScore();
         System.out.println();
 
+        Result result3 = junit.run(NumberThreeTest.class);
+        System.out.println("Running tests for NumberThree.");
+        System.out.println("Total Tests: " + result3.getRunCount());
+        System.out.println("Failures: " + result3.getFailureCount());
+        System.out.println("Successes: " + (NumberThreeTest.getTestCount() - result3.getFailureCount()));
+        System.out.println("NumberTwo Score: " + NumberThreeTest.getScore());
+        TOTAL_SCORE += NumberThreeTest.getScore();
+        System.out.println();
+
+
         System.out.println("Total Possible Points: " + MAX_SCORE);
         System.out.println("Your Total Score: " + TOTAL_SCORE);
 
