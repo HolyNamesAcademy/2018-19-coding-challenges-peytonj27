@@ -23,7 +23,7 @@ Getting started
 
 The Project
 -----
-In this GitHub package you will find X coding challenges. Each challenge will have you implement one method. As you complete each coding challenge you should run the `ScoreCalculator` class. This will run all of the tests and tell you your updated score! For each challenge it will tell you how many tests were run, how many failed, and how many points you earned.
+In this GitHub package you will find 5 coding challenges. Each challenge will have you implement one method. As you complete each coding challenge you should run the `ScoreCalculator` class. This will run all of the tests and tell you your updated score! For each challenge it will tell you how many tests were run, how many failed, and how many points you earned.
 
 Each method currently throws a `UnsupportedOperationException`. When you run the tests before you have removed the exception you will see a printout like this:
 ```
