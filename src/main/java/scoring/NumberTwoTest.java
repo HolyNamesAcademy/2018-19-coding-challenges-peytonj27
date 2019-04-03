@@ -7,6 +7,8 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assume.assumeNoException;
 
 public class NumberTwoTest {
+
+    private static final int MAX_SCORE = 18;
     private static int SCORE = 0;
     private static int TEST_COUNT = 0;
 
@@ -133,6 +135,10 @@ public class NumberTwoTest {
 
     public static int getScore(){
         return SCORE;
+    }
+
+    public static int getMaxScore(){
+        return MAX_SCORE;
     }
 
     public static int getTestCount(){

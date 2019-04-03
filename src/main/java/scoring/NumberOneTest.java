@@ -9,6 +9,7 @@ import challenges.NumberOne;
 
 public class NumberOneTest {
 
+    private static final int MAX_SCORE = 3;
     private static int SCORE = 0;
     private static int TEST_COUNT = 0;
 
@@ -67,6 +68,10 @@ public class NumberOneTest {
 
     public static int getScore(){
         return SCORE;
+    }
+
+    public static int getMaxScore(){
+        return MAX_SCORE;
     }
 
     public static int getTestCount(){

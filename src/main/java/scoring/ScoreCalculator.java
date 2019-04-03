@@ -10,7 +10,7 @@ import java.util.List;
 public class ScoreCalculator {
 
     private static int TOTAL_SCORE = 0;
-    private static final int MAX_SCORE = 100;
+    private static int MAX_SCORE = 0;
 
     public static void main(String[] args) {
         JUnitCore junit = new JUnitCore();
@@ -21,7 +21,9 @@ public class ScoreCalculator {
         System.out.println("Failures: " + result1.getFailureCount());
         System.out.println("Successes: " + (NumberOneTest.getTestCount() - result1.getFailureCount()));
         System.out.println("NumberOne Score: " + NumberOneTest.getScore());
+        System.out.println("NumberOne Max Score: " + NumberOneTest.getMaxScore());
         TOTAL_SCORE += NumberOneTest.getScore();
+        MAX_SCORE += NumberOneTest.getMaxScore();
         System.out.println();
 
 
@@ -31,7 +33,9 @@ public class ScoreCalculator {
         System.out.println("Failures: " + result2.getFailureCount());
         System.out.println("Successes: " + (NumberTwoTest.getTestCount() - result2.getFailureCount()));
         System.out.println("NumberTwo Score: " + NumberTwoTest.getScore());
+        System.out.println("NumberTwo Max Score: " + NumberTwoTest.getMaxScore());
         TOTAL_SCORE += NumberTwoTest.getScore();
+        MAX_SCORE += NumberThreeTest.getMaxScore();
         System.out.println();
 
         Result result3 = junit.run(NumberThreeTest.class);
@@ -39,8 +43,10 @@ public class ScoreCalculator {
         System.out.println("Total Tests: " + result3.getRunCount());
         System.out.println("Failures: " + result3.getFailureCount());
         System.out.println("Successes: " + (NumberThreeTest.getTestCount() - result3.getFailureCount()));
-        System.out.println("NumberTwo Score: " + NumberThreeTest.getScore());
+        System.out.println("NumberThree Score: " + NumberThreeTest.getScore());
+        System.out.println("NumberThree Max Score: " + NumberThreeTest.getMaxScore());
         TOTAL_SCORE += NumberThreeTest.getScore();
+        MAX_SCORE += NumberThreeTest.getMaxScore();
         System.out.println();
 
 
