@@ -14,40 +14,23 @@ public class ScoreCalculator {
 
     public static void main(String[] args) {
         JUnitCore junit = new JUnitCore();
-        Result result1 = junit.run(NumberOneTest.class);
 
-        System.out.println("Running tests for NumberOne.");
-        System.out.println("Total Tests: " + result1.getRunCount());
-        System.out.println("Failures: " + result1.getFailureCount());
-        System.out.println("Successes: " + (NumberOneTest.getTestCount() - result1.getFailureCount()));
-        System.out.println("NumberOne Score: " + NumberOneTest.getScore());
-        System.out.println("NumberOne Max Score: " + NumberOneTest.getMaxScore());
-        TOTAL_SCORE += NumberOneTest.getScore();
-        MAX_SCORE += NumberOneTest.getMaxScore();
-        System.out.println();
+        Result result1 = junit.run(NumberOneTest.class);
+        printScoreReport(result1, "NumberOne", NumberOneTest.getTestCount(),
+                NumberOneTest.getScore(), NumberOneTest.getMaxScore());
 
 
         Result result2 = junit.run(NumberTwoTest.class);
-        System.out.println("Running tests for NumberTwo.");
-        System.out.println("Total Tests: " + result2.getRunCount());
-        System.out.println("Failures: " + result2.getFailureCount());
-        System.out.println("Successes: " + (NumberTwoTest.getTestCount() - result2.getFailureCount()));
-        System.out.println("NumberTwo Score: " + NumberTwoTest.getScore());
-        System.out.println("NumberTwo Max Score: " + NumberTwoTest.getMaxScore());
-        TOTAL_SCORE += NumberTwoTest.getScore();
-        MAX_SCORE += NumberThreeTest.getMaxScore();
-        System.out.println();
+        printScoreReport(result2, "NumberTwo", NumberTwoTest.getTestCount(),
+                NumberTwoTest.getScore(), NumberTwoTest.getMaxScore());
 
         Result result3 = junit.run(NumberThreeTest.class);
-        System.out.println("Running tests for NumberThree.");
-        System.out.println("Total Tests: " + result3.getRunCount());
-        System.out.println("Failures: " + result3.getFailureCount());
-        System.out.println("Successes: " + (NumberThreeTest.getTestCount() - result3.getFailureCount()));
-        System.out.println("NumberThree Score: " + NumberThreeTest.getScore());
-        System.out.println("NumberThree Max Score: " + NumberThreeTest.getMaxScore());
-        TOTAL_SCORE += NumberThreeTest.getScore();
-        MAX_SCORE += NumberThreeTest.getMaxScore();
-        System.out.println();
+        printScoreReport(result3, "NumberThree", NumberThreeTest.getTestCount(),
+                NumberThreeTest.getScore(), NumberThreeTest.getMaxScore());
+
+        Result result4 = junit.run(NumberFourTest.class);
+        printScoreReport(result4, "NumberFour", NumberFourTest.getTestCount(),
+                NumberFourTest.getScore(), NumberFourTest.getMaxScore());
 
 
         System.out.println("Total Possible Points: " + MAX_SCORE);
@@ -64,4 +47,16 @@ public class ScoreCalculator {
         }
     }
 
+    private static void printScoreReport(Result result, String challengeName, int testCount, int score, int maxScore){
+        System.out.println("Running tests for " + challengeName + ".");
+        System.out.println("Total Tests: " + result.getRunCount());
+        System.out.println("Failures: " + result.getFailureCount());
+        System.out.println("Successes: " + (testCount - result.getFailureCount()));
+        System.out.println(challengeName + " Score: " + score);
+        System.out.println(challengeName + " Max Score: " + maxScore);
+        TOTAL_SCORE += score;
+        MAX_SCORE += maxScore;
+        System.out.println();
+
+    }
 }
