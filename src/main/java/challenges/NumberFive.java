@@ -28,8 +28,24 @@ public class NumberFive {
      *
      * @return true if word1 and word2 are case-insensitive anagrams, false otherwise.
      */
-    public boolean isAnagram(String word1, String word2) {
-        // Delete the line below and implement the method!
-        throw new UnsupportedOperationException();
+    public boolean isAnagram(String word1, String word2)
+    {
+        word1 = word1.toLowerCase();
+        word2 = word2.toLowerCase();
+        char[] breakUp1 = word1.toCharArray();
+        char[] breakUp2 = word2.toCharArray();
+        if(breakUp1.length==breakUp2.length) {
+            for (int i = 0; i < breakUp1.length; i++)
+            {
+                char letter = breakUp1[i];
+                for (int j = 0; j < breakUp2.length; j++)
+                {
+                    //search for the letter in the big word
+                    //change the letter to a symbol
+                    //return true 
+                }
+            }
+        }
+        return false;
     }
 }
