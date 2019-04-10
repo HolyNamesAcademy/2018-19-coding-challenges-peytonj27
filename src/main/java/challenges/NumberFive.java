@@ -34,18 +34,31 @@ public class NumberFive {
         word2 = word2.toLowerCase();
         char[] breakUp1 = word1.toCharArray();
         char[] breakUp2 = word2.toCharArray();
-        if(breakUp1.length==breakUp2.length) {
+        if(breakUp1.length==breakUp2.length)
+        {
+            if(word1==word2)
+            {
+                return true;
+            }
             for (int i = 0; i < breakUp1.length; i++)
             {
                 char letter = breakUp1[i];
                 for (int j = 0; j < breakUp2.length; j++)
                 {
-                    //search for the letter in the big word
-                    //change the letter to a symbol
-                    //return true 
+                    char letter2 = breakUp2[j];
+                    if(letter == letter2)
+                    {
+                        breakUp2[j] = '-';
+                        break;
+                    }
                 }
             }
         }
-        return false;
+        for(int p = 0; p < breakUp2.length; p++)
+        {
+            if(breakUp2[p]!='-')
+                return false;
+        }
+        return true;
     }
 }
